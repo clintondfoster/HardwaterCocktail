@@ -1,4 +1,4 @@
-// import Hero from './components/Hero'
+import Hero from './components/Hero'
 // import VideoPlayer from './components/VideoPlayer'
 // import Bio from './components/Bio'
 // import Testimonials from './components/Testimonials'
@@ -10,14 +10,14 @@ export default function Home() {
         <main className='bg-slate-950'>
             <Hero />
             <div className='flex w-full md:flex-row flex-col'>
-                <VideoPlayer />
-                <Bio />
+                {/* <VideoPlayer /> */}
+                {/* <Bio /> */}
             </div>
             <div className='flex w-full md:flex-row flex-col justify-center items-center'>
                 {/* <Testimonials /> */}
                 {/* <Contact /> */}
                 <div>
-                  <h1>Sign up to be the first to know about special events and new menus.</h1>
+                  <h1>Sign up and be the first to know about upcoming events and new menus!</h1>
                   <SubscribeForm />
                 </div>
             </div>
