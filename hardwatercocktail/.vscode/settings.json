@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "Redshift Driver (Dedicated ver)",
+            "name": "Hardwater Bar DB",
+            "database": "hardwaterbar",
+            "username": "clintonfoster",
+            "password": ""
+        }
+    ]
+}
