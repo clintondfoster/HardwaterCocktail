@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import pool from '../../database/db';
+import pool from '../database/db';
 import validator from 'validator';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

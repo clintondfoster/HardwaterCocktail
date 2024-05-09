@@ -1,13 +1,13 @@
-import Hero from './components/Hero';
+import Hero from '../src/components/Hero';
 // import VideoPlayer from './components/VideoPlayer'
-import Bio from './components/Bio'
+import Bio from '../src/components/Bio'
 // import Testimonials from './components/Testimonials'
-import Contact from './components/ContactForm';
-import SubscribeForm from './components/SubscribeForm';
-import NavBar from './components/NavBar';
+import Contact from '../src/components/ContactForm';
+import SubscribeForm from '../src/components/SubscribeForm';
+import NavBar from '../src/components/NavBar';
 import "./globals.css";
 
-export default function Home() {
+export default function Main() {
     return (
         <main className='bg-slate-950 min-h-screen'>
             <NavBar />

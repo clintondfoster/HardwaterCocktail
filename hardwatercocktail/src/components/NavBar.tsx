@@ -9,21 +9,21 @@ import React from 'react';
 
 export default function NavBar() {
     const [isDropDownOpen, setIsDropDownOpen] = useState(false);
-    const toggleDropDown = () => setIsDropDownOpen(!isDropDownOpen);
+    // const toggleDropDown = () => setIsDropDownOpen(!isDropDownOpen);
 
-    useEffect(() => {
-        const closeDropdown = (e: MouseEvent) => {
-            if (!(e.target as Element).closest('.navbar-end')) {
-                setIsDropDownOpen(false);
-            }
-        };
-        if (isDropDownOpen) {
-            window.addEventListener('click', closeDropdown)
-        }
-        return () => {
-            window.removeEventListener('click', closeDropdown)
-        };
-    }, [isDropDownOpen])
+    // useEffect(() => {
+    //     const closeDropdown = (e: MouseEvent) => {
+    //         if (!(e.target as Element).closest('.navbar-end')) {
+    //             setIsDropDownOpen(false);
+    //         }
+    //     };
+    //     if (isDropDownOpen) {
+    //         window.addEventListener('click', closeDropdown)
+    //     }
+    //     return () => {
+    //         window.removeEventListener('click', closeDropdown)
+    //     };
+    // }, [isDropDownOpen])
 
     return (
         <nav className="fixed top-0 left-0 z-50 w-full flex justify-between text-xl bg-white bg-opacity-50 backdrop-blur-lg">
@@ -42,41 +42,43 @@ export default function NavBar() {
                     <li><Link href={'/#bio'} passHref>About Us</Link></li>
                     <li><Link href={'/#contact'} passHref>Contact</Link></li>
                 </ul>
-                <div className='dropdown'>
-                    <div 
-                        tabIndex={0}
-                        role="button"
-                        className="btn btn-ghost md:hidden text-xl"
-                        >
-                            <MdMenu aria-label="Menu" />
-                    </div>
-                    <ul 
-                        tabIndex={0}
-                        className="menu dropdown-content menu-sm relative right-0 z-50 mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
-                        >
-                            <li><Link href={'/#bio'}>About Us</Link></li>
-                            <li><Link href={'/#contact'}>Contact</Link></li>
 
+                <button onClick={() => setIsDropDownOpen(!isDropDownOpen)} className=" md:hidden">
+                        <MdMenu aria-label='Menu' />
+                    </button>
+                    {isDropDownOpen && (
+                        <ul id="dropdown-menu" className="absolute right-0 top-full mt-2 w-52 rounded bg-base-100 p-2 shadow md:hidden">
+                            <li><Link href={'/#bio'} passHref>About Us</Link></li>
+                            <li><Link href={'/#contact'} passHref>Contact</Link></li>
                         </ul>
+                    )}
                 </div>
-                </div>
-            </nav>
+        </nav>
     )
 }
 
-//                     <button onClick={toggleDropDown} className="block md:hidden" aria-expanded={isDropDownOpen} aria-controls="dropdown-menu">
-//                         <MdMenu aria-label='Menu' />
-//                     </button>
-//                     {isDropDownOpen && (
-//                         <ul id="dropdown-menu" className="absolute right-0 top-full mt-2 w-52 rounded bg-base-100 p-2 shadow md:hidden">
-                            
-//                             {/* <li><Link href="https://www.instagram.com/hardwaterbentonville/"><FaInstagram aria-label="Instagram" /></Link></li> */}
+//                 <div className='dropdown'>
+//                     <div 
+//                         tabIndex={0}
+//                         role="button"
+//                         className="btn btn-ghost md:hidden text-xl"
+//                         >
+//                             <MdMenu aria-label="Menu" />
+//                     </div>
+//                     <ul 
+//                         tabIndex={0}
+//                         className="menu dropdown-content menu-sm relative right-0 z-50 mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
+//                         >
+//                             <li><Link href={'/#bio'}>About Us</Link></li>
+//                             <li><Link href={'/#contact'}>Contact</Link></li>
+
 //                         </ul>
-//                     )}
 //                 </div>
-//         </nav>
+//                 </div>
+//             </nav>
 //     )
 // }
+
 
 
 {/* <li className="text-3xl" hidden>
