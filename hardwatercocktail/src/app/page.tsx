@@ -5,6 +5,7 @@ import Bio from './components/Bio'
 import Contact from './components/ContactForm';
 import SubscribeForm from './components/SubscribeForm';
 import NavBar from './components/NavBar';
+import "./globals.css";
 
 export default function Home() {
     return (
