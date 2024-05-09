@@ -1,6 +1,8 @@
+'use client'
 import Link from "next/link";
 import { MdOutlineEmail } from "react-icons/md";
 import {useState, FormEvent } from 'react';
+
 
 export default function Contact() {
     const [name, setName] = useState('');

@@ -1,8 +1,8 @@
-import Hero from './components/Hero'
+import Hero from './components/Hero';
 // import VideoPlayer from './components/VideoPlayer'
 // import Bio from './components/Bio'
 // import Testimonials from './components/Testimonials'
-// import Contact from './components/Contact'
+import Contact from './components/ContactForm';
 import SubscribeForm from './components/SubscribeForm';
 
 export default function Home() {
@@ -15,9 +15,10 @@ export default function Home() {
             </div>
             <div className='flex w-full md:flex-row flex-col justify-center items-center'>
                 {/* <Testimonials /> */}
-                {/* <Contact /> */}
+                <Contact />
                 <div>
                   <h1>Sign up and be the first to know about upcoming events and new menus!</h1>
+                  <h2>New Content!</h2>
                   <SubscribeForm />
                 </div>
             </div>
