@@ -4,16 +4,18 @@ import Hero from './components/Hero';
 // import Testimonials from './components/Testimonials'
 import Contact from './components/ContactForm';
 import SubscribeForm from './components/SubscribeForm';
+import NavBar from './components/NavBar';
 
 export default function Home() {
     return (
-        <main className='bg-slate-950'>
+        <main className='bg-slate-950 min-h-screen'>
+            <NavBar />
             <Hero />
             <div className='flex w-full md:flex-row flex-col'>
                 {/* <VideoPlayer /> */}
                 {/* <Bio /> */}
             </div>
-            <div className='flex w-full md:flex-row flex-col justify-center items-center'>
+            <div className='flex flex-col md:flex-row w-full justify-center items-center my-8'>
                 {/* <Testimonials /> */}
                 <Contact />
                 <div>

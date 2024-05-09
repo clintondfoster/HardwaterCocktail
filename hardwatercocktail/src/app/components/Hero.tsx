@@ -5,6 +5,9 @@ export default function Hero() {
     console.log("Hero component loaded");
     return (
         <div className="relative h-full w-full overflow-hidden">
+            {/* <div>
+                <h1 style={{ color: 'white', zIndex: 100, position: 'absolute' }}>HERO RENDER</h1>
+            </div> */}
             <div className="absolute inset-0 z-10">
                 <video
                     playsInline
@@ -17,13 +20,14 @@ export default function Hero() {
                     <source src="/videos/HardwaterVid.mp4" type="video/mp4" />
                 </video>
             </div>
-            <div className="absolute z-20 inset-0 flex items-center justify-center bg-slate-900/50">
+            <div className="absolute z-20 inset-0 flex items-center justify-center">
                 <Image
                     src="/images/Hardwater-Vertical-Knockout.svg"  
                     alt="Hardwater Cocktail Room"
                     width={400}
                     height={200}
                 />
+                </div>
                 {/* <h1 className="text-xl text-slate-100 md:text-3xl text-center">
                     Your captivating tagline here!
                 </h1> */}
@@ -36,7 +40,6 @@ export default function Hero() {
                     <h1>Hero Content here!</h1>
                 </div>
             </div>
-        </div>
     )
 }
 
