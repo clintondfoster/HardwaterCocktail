@@ -39,23 +39,44 @@ export default function NavBar() {
             </div>
             <div className="navbar-end flex-grow p-4">
                 <ul className="hidden md:flex gap-6">
-                    <li><Link href="/#bio" passHref>About Us</Link></li>
-                    <li><Link href="/#contact" passHref>Contact</Link></li>
+                    <li><Link href={'/#bio'} passHref>About Us</Link></li>
+                    <li><Link href={'/#contact'} passHref>Contact</Link></li>
                 </ul>
-                    <button onClick={toggleDropDown} className="block md:hidden" aria-expanded={isDropDownOpen} aria-controls="dropdown-menu">
-                        <MdMenu aria-label='Menu' />
-                    </button>
-                    {isDropDownOpen && (
-                        <ul id="dropdown-menu" className="absolute right-0 top-full mt-2 w-52 rounded bg-base-100 p-2 shadow md:hidden">
+                <div className='dropdown'>
+                    <div 
+                        tabIndex={0}
+                        role="button"
+                        className="btn btn-ghost md:hidden text-xl"
+                        >
+                            <MdMenu aria-label="Menu" />
+                    </div>
+                    <ul 
+                        tabIndex={0}
+                        className="menu dropdown-content menu-sm relative right-0 z-50 mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
+                        >
                             <li><Link href={'/#bio'}>About Us</Link></li>
                             <li><Link href={'/#contact'}>Contact</Link></li>
-                            {/* <li><Link href="https://www.instagram.com/hardwaterbentonville/"><FaInstagram aria-label="Instagram" /></Link></li> */}
+
                         </ul>
-                    )}
                 </div>
-        </nav>
+                </div>
+            </nav>
     )
 }
+
+//                     <button onClick={toggleDropDown} className="block md:hidden" aria-expanded={isDropDownOpen} aria-controls="dropdown-menu">
+//                         <MdMenu aria-label='Menu' />
+//                     </button>
+//                     {isDropDownOpen && (
+//                         <ul id="dropdown-menu" className="absolute right-0 top-full mt-2 w-52 rounded bg-base-100 p-2 shadow md:hidden">
+                            
+//                             {/* <li><Link href="https://www.instagram.com/hardwaterbentonville/"><FaInstagram aria-label="Instagram" /></Link></li> */}
+//                         </ul>
+//                     )}
+//                 </div>
+//         </nav>
+//     )
+// }
 
 
 {/* <li className="text-3xl" hidden>

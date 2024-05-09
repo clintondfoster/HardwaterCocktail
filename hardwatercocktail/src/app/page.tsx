@@ -1,6 +1,6 @@
 import Hero from './components/Hero';
 // import VideoPlayer from './components/VideoPlayer'
-// import Bio from './components/Bio'
+import Bio from './components/Bio'
 // import Testimonials from './components/Testimonials'
 import Contact from './components/ContactForm';
 import SubscribeForm from './components/SubscribeForm';
@@ -13,7 +13,7 @@ export default function Home() {
             <Hero />
             <div className='flex w-full md:flex-row flex-col'>
                 {/* <VideoPlayer /> */}
-                {/* <Bio /> */}
+                <Bio />
             </div>
             <div className='flex flex-col md:flex-row w-full justify-center items-center my-8'>
                 {/* <Testimonials /> */}
