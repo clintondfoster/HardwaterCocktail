@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, FormEvent } from 'react';
+import Image from 'next/image'
 
 interface ApiResponse {
     message: string;
@@ -39,18 +40,24 @@ const SubscribeForm = () => {
     };
       
     return (
-        <form onSubmit={handleSubmit}  aria-live="polite">
-            <label htmlFor="email">Email Address:</label>
-            <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email Address*"
-                required
-            />
-           <button type="submit" disabled={isLoading}>{isLoading ? 'Submitting...' : 'Submit'}</button>
-           {error && <p style={{ color: 'red' }}>{error}</p>}
-        </form>
+        <div className="bg-cover bg-center h-full" style={{backgroundImage: "url('/videos/cocktail-cheers.jpeg')"}} >
+            <h1>ADDING TO SUBSCRIBE FORM</h1>
+            <form onSubmit={handleSubmit}  className="flex flex-col items-center justify-center h-full" aria-live="polite">
+                <label htmlFor="email" className="text-white">Email Address:</label>
+                <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Email Address*"
+                    required
+                    className="bg-white text-black rounded-lg py-2 px-4 mb-4 w-full max-w-sm"
+                />
+            <button type="submit" disabled={isLoading} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" style={{ width: '100%', maxWidth: '10rem'}}>
+                {isLoading ? 'Submitting...' : 'Submit'}
+            </button>
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+            </form>
+        </div>
     );
 };
 

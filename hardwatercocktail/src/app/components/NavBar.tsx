@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaInstagram } from 'react-icons/fa';
+// import { FaInstagram } from 'react-icons/fa';
 import { MdMenu } from 'react-icons/md';
 import { useState, useEffect } from 'react';
 import React from 'react';
@@ -26,8 +26,8 @@ export default function NavBar() {
     }, [isDropDownOpen])
 
     return (
-        <nav className="navbar fixed top-0 left-0 z-50 w-full flex justify-between text-xl bg-black bg-opacity-75 backdrop-blur-lg">
-            <div className="navbar-start p-4">
+        <nav className="fixed top-0 left-0 z-50 w-full flex justify-between text-xl bg-white bg-opacity-50 backdrop-blur-lg">
+            <div className="navbar-start flex-grow p-4">
                 <Link href={'/#hero'} passHref>
                         <Image src="/images/Favicon-H-Knockout.svg" 
                         alt="Hardwater" 
@@ -37,7 +37,7 @@ export default function NavBar() {
                          />
                 </Link>
             </div>
-            <div className="navbar-end p-4">
+            <div className="navbar-end flex-grow p-4">
                 <ul className="hidden md:flex gap-6">
                     <li><Link href="/#bio" passHref>About Us</Link></li>
                     <li><Link href="/#contact" passHref>Contact</Link></li>
@@ -46,7 +46,7 @@ export default function NavBar() {
                         <MdMenu aria-label='Menu' />
                     </button>
                     {isDropDownOpen && (
-                        <ul id="dropdown-menu" className="absolute right-0 top-full mt-2 w-52 rounded bg-base-100 p-2 shadow block md:hidden">
+                        <ul id="dropdown-menu" className="absolute right-0 top-full mt-2 w-52 rounded bg-base-100 p-2 shadow md:hidden">
                             <li><Link href={'/#bio'}>About Us</Link></li>
                             <li><Link href={'/#contact'}>Contact</Link></li>
                             {/* <li><Link href="https://www.instagram.com/hardwaterbentonville/"><FaInstagram aria-label="Instagram" /></Link></li> */}
