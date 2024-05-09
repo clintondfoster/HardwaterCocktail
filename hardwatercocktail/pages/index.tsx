@@ -5,11 +5,10 @@ import Bio from '../src/components/Bio'
 import Contact from '../src/components/ContactForm';
 import SubscribeForm from '../src/components/SubscribeForm';
 import NavBar from '../src/components/NavBar';
-import "./globals.css";
 
 export default function Main() {
     return (
-        <main className='bg-slate-950 min-h-screen'>
+        <div className='bg-slate-950 min-h-screen'>
             <NavBar />
             <Hero />
             <div className='flex w-full md:flex-row flex-col'>
@@ -25,7 +24,7 @@ export default function Main() {
                   <SubscribeForm />
                 </div>
             </div>
-        </main>
+        </div>
     )
 }
 
